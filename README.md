@@ -1,2 +1,16 @@
 # language-learner
-Language Leaner Application from Zenva Course
+
+## 1. Description
+Simple Language Leaner Application from Zenva Course
+
+DEPLOYMENT: Project has not been deployed yet
+
+## 2. Features
+ * user is promtped with spanish word
+ * user then select one of four english translations
+ * if user is correct score++ and moves to next question
+
+## 3. Credits / Contact
+This application was created by Cameron Bushehry
+
+email: c.bushehry@gmail.com
