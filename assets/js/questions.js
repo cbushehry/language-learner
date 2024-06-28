@@ -108,5 +108,45 @@ let questions = [
         title: 'gallina', // 22 chicken
         alternatives: ['fox', 'sheep', 'monkey', 'chicken'],
         correctAnswer: 3
+      },
+      {
+        title: 'ciervo', // 23 deer
+        alternatives: ['deer', 'kangaroo', 'raccoon', 'owl'],
+        correctAnswer: 0
+      },
+      {
+        title: 'canguro', // 24 kangaroo
+        alternatives: ['deer', 'kangaroo', 'raccoon', 'owl'],
+        correctAnswer: 1
+      },
+      {
+        title: 'mapache', // 25 raccoon
+        alternatives: ['deer', 'kangaroo', 'raccoon', 'owl'],
+        correctAnswer: 2
+      },
+      {
+        title: 'búho', // 26 owl
+        alternatives: ['deer', 'kangaroo', 'raccoon', 'owl'],
+        correctAnswer: 3
+      },
+      {
+        title: 'ardilla', // 27 squirrel
+        alternatives: ['squirrel', 'crocodile', 'snake', 'camel'],
+        correctAnswer: 0
+      },
+      {
+        title: 'cocodrilo', // 28 crocodile
+        alternatives: ['squirrel', 'crocodile', 'snake', 'camel'],
+        correctAnswer: 1
+      },
+      {
+        title: 'serpiente', // 29 snake
+        alternatives: ['squirrel', 'crocodile', 'snake', 'camel'],
+        correctAnswer: 2
+      },
+      {
+        title: 'camello', // 30 camel
+        alternatives: ['squirrel', 'crocodile', 'snake', 'camel'],
+        correctAnswer: 3
       }
   ];
