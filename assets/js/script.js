@@ -1,33 +1,3 @@
-let question = {
-  title: 'gato',
-  alternatives: ['dog', 'cat', 'bird', 'fish'],
-  correctAnswer: 1
-};
-
-// define the array that stores all questions
-let questions = [
-  {
-    title: 'gato',
-    alternatives: ['dog', 'cat', 'bird', 'fish'],
-    correctAnswer: 1
-  },
-  {
-    title: 'ave',
-    alternatives: ['mouse', 'hamster', 'lizard', 'bird'],
-    correctAnswer: 3
-  },
-  {
-    title: 'rata',
-    alternatives: ['cat', 'fish', 'rat', 'shark'],
-    correctAnswer: 2
-  },
-  {
-    title: 'mosca',
-    alternatives: ['fly', 'puma', 'fish', 'dog'],
-    correctAnswer: 0
-  }
-];
-
 let app = {
   start: function() {
     
