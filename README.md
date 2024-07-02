@@ -3,7 +3,7 @@
 ## 1. Description
 Simple Language Leaner Application from Zenva Course
 
-DEPLOYMENT: Project has not been deployed yet
+[DEPLOYMENT](https://cbushehry.github.io/language-learner/)
 
 ## 2. Features
  * user is promtped with spanish word
