@@ -10,6 +10,8 @@ Simple Language Leaner Application from Zenva Course
  * user then select one of four english translations
  * if user is correct score++ and moves to next question
 
+ <img src="assets/images/language-learner.png" width="50%" height="auto">
+
 ## 3. Credits / Contact
 This application was created by Cameron Bushehry
 
