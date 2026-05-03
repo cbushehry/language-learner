@@ -46,3 +46,44 @@ ul {
 #score, #result {
     color: white;
 }
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    color: white;
+    margin: 16px 0 4px;
+}
+
+#instructions {
+    color: white;
+    font-size: 14px;
+    margin: 0 0 12px;
+}
+
+#progress {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+#final-score {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#play-again {
+    padding: 10px 24px;
+    font-size: 16px;
+    font-family: arial;
+    cursor: pointer;
+    background: white;
+    border: none;
+}
+
+#play-again:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

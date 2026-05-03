@@ -1,107 +1,90 @@
 let app = {
-  start: function() {
-    
-    this.currPosition = 0;
-    this.score = 0; // property to keep track of score
-    
-    // get alternatives
+  init: function() {
     let alts = document.querySelectorAll('.alternative');
-  
     alts.forEach((element, index) => {
-            
       element.addEventListener('click', () => {
-        // check correct answer
         this.checkAnswer(index);
       });
     });
-    
-    // refresh stats
+
+    document.getElementById('play-again').addEventListener('click', () => this.start());
+
+    this.start();
+  },
+
+  start: function() {
+    this.currPosition = 0;
+    this.score = 0;
+
+    document.getElementById('quiz').classList.remove('hidden');
+    document.getElementById('end-screen').classList.add('hidden');
+    document.getElementById('result').textContent = '';
+
     this.updateStats();
-    
-    // show first question
     this.showQuestion(questions[this.currPosition]);
   },
-  
+
   showQuestion: function(q) {
-    
-    // show question title
-    let titleDiv = document.getElementById('title');
-    titleDiv.textContent = q.title; 
-  
-    // show alternatives
+    document.getElementById('result').textContent = '';
+    document.getElementById('title').textContent = q.title;
+
     let alts = document.querySelectorAll('.alternative');
-  
-    alts.forEach(function(element, index){
+    alts.forEach(function(element, index) {
       element.textContent = q.alternatives[index];
     });
+
+    this.updateProgress();
   },
-  
+
   checkAnswer: function(userSelected) {
-    
     let currQuestion = questions[this.currPosition];
-    
-    if(currQuestion.correctAnswer == userSelected) {
-      // correct
-      console.log('correct');
+    let isLastQuestion = this.currPosition === questions.length - 1;
+
+    if (currQuestion.correctAnswer === userSelected) {
       this.score++;
       this.showResult(true);
-    }
-    else {
-      // not correct
-      console.log('wrong');
+    } else {
       this.showResult(false);
     }
-    
-    // refresh stats
+
     this.updateStats();
-    
-    // increase position
-    this.increasePosition();
-    
-    // show next question
-    this.showQuestion(questions[this.currPosition]);
-  },
-  
-  increasePosition: function() {
-    this.currPosition++;
-    
-    if(this.currPosition == questions.length){
-      this.currPosition = 0;
+
+    if (isLastQuestion) {
+      this.showEndScreen();
+    } else {
+      this.currPosition++;
+      this.showQuestion(questions[this.currPosition]);
     }
   },
-  
+
   updateStats: function() {
-    let scoreDiv = document.getElementById('score');
-    scoreDiv.textContent = `Your score: ${this.score}`;
+    document.getElementById('score').textContent = `Score: ${this.score}`;
   },
-  
+
+  updateProgress: function() {
+    document.getElementById('progress').textContent =
+      `Question ${this.currPosition + 1} of ${questions.length}`;
+  },
+
   showResult: function(isCorrect) {
-    // select the DOM element
     let resultDiv = document.getElementById('result');
-    let result = '';
-    
-    // checks
-    if(isCorrect) {
-      result = 'Correct Answer!';
+
+    if (isCorrect) {
+      resultDiv.textContent = 'Correct!';
+    } else {
+      let correctAnswerText = questions[this.currPosition].alternatives[
+        questions[this.currPosition].correctAnswer
+      ];
+      resultDiv.textContent = `Wrong! Correct answer: ${correctAnswerText}`;
     }
-    else {
-      // get the current question
-      let currQuestion = questions[this.currPosition];
-      
-      // get the correct answer (index)
-      let correctAnswerIndex = currQuestion.correctAnswer;
-      
-      // get correct answer (text)
-      let correctAnswerText = currQuestion.alternatives[correctAnswerIndex];
-      
-      result = `Wrong! Correct answer: ${correctAnswerText}`;
-    }
-    
-    resultDiv.textContent = result;
-    
+  },
+
+  showEndScreen: function() {
+    document.getElementById('quiz').classList.add('hidden');
+    document.getElementById('end-screen').classList.remove('hidden');
+    document.getElementById('final-score').textContent =
+      `You scored ${this.score} out of ${questions.length}!`;
   }
-  
 };
 
-// initialize the application
-app.start();
+app.init();

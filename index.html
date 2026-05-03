@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="description" content="JS Language Learning Game - Showing the Score">
+  <meta name="description" content="Spanish to English vocabulary quiz — test your knowledge of animal names in Spanish.">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="./assets/css/styles.css">
@@ -9,16 +9,27 @@
 </head>
 <body>
   <div id="wrapper">
-  <div id="title"></div>
-  <ul>
-    <li class="alternative"></li>
-    <li class="alternative"></li>
-    <li class="alternative"></li>
-    <li class="alternative"></li>
-  </ul>
+    <h1>Language Learner</h1>
+    <p id="instructions">Translate the Spanish word — choose the correct English translation.</p>
 
-  <div id="result"></div>
-  <div id="score"></div>
+    <div id="quiz">
+      <div id="progress"></div>
+      <div id="title"></div>
+      <ul>
+        <li class="alternative"></li>
+        <li class="alternative"></li>
+        <li class="alternative"></li>
+        <li class="alternative"></li>
+      </ul>
+      <div id="result"></div>
+      <div id="score"></div>
+    </div>
+
+    <div id="end-screen" class="hidden">
+      <p id="final-score"></p>
+      <button id="play-again">Play Again</button>
+    </div>
+  </div>
 
   <script src="./assets/js/questions.js"></script>
   <script src="./assets/js/script.js"></script>
