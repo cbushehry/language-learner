@@ -15,17 +15,31 @@ let app = {
   start: function() {
     this.currPosition = 0;
     this.score = 0;
+    this.deck = this.shuffleQuestions(questions);
 
     document.getElementById('quiz').classList.remove('hidden');
     document.getElementById('end-screen').classList.add('hidden');
-    document.getElementById('result').textContent = '';
+    let resultDiv = document.getElementById('result');
+    resultDiv.textContent = '';
+    resultDiv.className = '';
 
     this.updateStats();
-    this.showQuestion(questions[this.currPosition]);
+    this.showQuestion(this.deck[this.currPosition]);
+  },
+
+  shuffleQuestions: function(arr) {
+    let shuffled = arr.slice();
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
   },
 
   showQuestion: function(q) {
-    document.getElementById('result').textContent = '';
+    let resultDiv = document.getElementById('result');
+    resultDiv.textContent = '';
+    resultDiv.className = '';
     document.getElementById('title').textContent = q.title;
 
     let alts = document.querySelectorAll('.alternative');
@@ -37,8 +51,8 @@ let app = {
   },
 
   checkAnswer: function(userSelected) {
-    let currQuestion = questions[this.currPosition];
-    let isLastQuestion = this.currPosition === questions.length - 1;
+    let currQuestion = this.deck[this.currPosition];
+    let isLastQuestion = this.currPosition === this.deck.length - 1;
 
     if (currQuestion.correctAnswer === userSelected) {
       this.score++;
@@ -53,7 +67,7 @@ let app = {
       this.showEndScreen();
     } else {
       this.currPosition++;
-      this.showQuestion(questions[this.currPosition]);
+      this.showQuestion(this.deck[this.currPosition]);
     }
   },
 
@@ -63,18 +77,18 @@ let app = {
 
   updateProgress: function() {
     document.getElementById('progress').textContent =
-      `Question ${this.currPosition + 1} of ${questions.length}`;
+      `Question ${this.currPosition + 1} of ${this.deck.length}`;
   },
 
   showResult: function(isCorrect) {
     let resultDiv = document.getElementById('result');
+    resultDiv.className = isCorrect ? 'correct' : 'wrong';
 
     if (isCorrect) {
       resultDiv.textContent = 'Correct!';
     } else {
-      let correctAnswerText = questions[this.currPosition].alternatives[
-        questions[this.currPosition].correctAnswer
-      ];
+      let currQuestion = this.deck[this.currPosition];
+      let correctAnswerText = currQuestion.alternatives[currQuestion.correctAnswer];
       resultDiv.textContent = `Wrong! Correct answer: ${correctAnswerText}`;
     }
   },
@@ -83,7 +97,7 @@ let app = {
     document.getElementById('quiz').classList.add('hidden');
     document.getElementById('end-screen').classList.remove('hidden');
     document.getElementById('final-score').textContent =
-      `You scored ${this.score} out of ${questions.length}!`;
+      `You scored ${this.score} out of ${this.deck.length}!`;
   }
 };
 

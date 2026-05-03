@@ -1,272 +1,122 @@
 let questions = [
-    {
-      title: 'gato', // 1 cat
-      alternatives: ['dog', 'cat', 'bird', 'fish'],
-      correctAnswer: 1
-    },
-    {
-      title: 'ave', // 2 bird
-      alternatives: ['mouse', 'hamster', 'lizard', 'bird'],
-      correctAnswer: 3
-    },
-    {
-      title: 'rata', // 3 rat
-      alternatives: ['cat', 'fish', 'rat', 'shark'],
-      correctAnswer: 2
-    },
-    {
-      title: 'mosca', // 4 fly
-      alternatives: ['fly', 'puma', 'fish', 'dog'],
-      correctAnswer: 0
-    },
-    {
-      title: 'perro', // 5 dog
-      alternatives: ['cat', 'fish', 'dog', 'bird'],
-      correctAnswer: 2
-    },
-    {
-      title: 'pez', // 6 fish
-      alternatives: ['lizard', 'hamster', 'fish', 'shark'],
-      correctAnswer: 2
-    },
-    {
-      title: 'lagarto', // 7 lizard
-      alternatives: ['mouse', 'lizard', 'puma', 'fly'],
-      correctAnswer: 1
-    },
-    {
-      title: 'ratón', // 8 mouse
-      alternatives: ['hamster', 'shark', 'dog', 'mouse'],
-      correctAnswer: 3
-    },
-    {
-      title: 'tiburón', // 9 shark
-      alternatives: ['shark', 'lizard', 'bird', 'fly'],
-      correctAnswer: 0
-    },
-    {
-        title: 'conejo', // 10 rabbit
-        alternatives: ['rabbit', 'horse', 'elephant', 'giraffe'],
-        correctAnswer: 0
-    },
-    {
-        title: 'caballo', // 11 horse
-        alternatives: ['lion', 'horse', 'turtle', 'bear'],
-        correctAnswer: 1
-    },
-    {
-        title: 'jirafa', // 12 giraffe
-        alternatives: ['wolf', 'cow', 'giraffe', 'pig'],
-        correctAnswer: 2
-    },
-    {
-        title: 'oso', // 13 bear
-        alternatives: ['rabbit', 'bear', 'horse', 'elephant'],
-        correctAnswer: 1
-    },
-    {
-        title: 'lobo', // 14 wolf
-        alternatives: ['giraffe', 'lion', 'wolf', 'turtle'],
-        correctAnswer: 2
-    },
-    {
-        title: 'vaca', // 15 cow
-        alternatives: ['cow', 'pig', 'rabbit', 'horse'],
-        correctAnswer: 0
-    },
-    {
-        title: 'cerdo', // 16 pig
-        alternatives: ['bear', 'elephant', 'cow', 'pig'],
-        correctAnswer: 3
-    },
-    {
-        title: 'tortuga', // 17 turtle
-        alternatives: ['turtle', 'wolf', 'lion', 'rabbit'],
-        correctAnswer: 0
-    },
-    {
-        title: 'zorro', // 18 fox
-        alternatives: ['fox', 'duck', 'monkey', 'sheep'],
-        correctAnswer: 0
-      },
-      {
-        title: 'pato', // 19 duck
-        alternatives: ['chicken', 'monkey', 'duck', 'fox'],
-        correctAnswer: 2
-      },
-      {
-        title: 'mono', // 20 monkey
-        alternatives: ['sheep', 'monkey', 'duck', 'chicken'],
-        correctAnswer: 1
-      },
-      {
-        title: 'oveja', // 21 sheep
-        alternatives: ['duck', 'sheep', 'chicken', 'monkey'],
-        correctAnswer: 1
-      },
-      {
-        title: 'gallina', // 22 chicken
-        alternatives: ['fox', 'sheep', 'monkey', 'chicken'],
-        correctAnswer: 3
-      },
-      {
-        title: 'ciervo', // 23 deer
-        alternatives: ['deer', 'kangaroo', 'raccoon', 'owl'],
-        correctAnswer: 0
-      },
-      {
-        title: 'canguro', // 24 kangaroo
-        alternatives: ['deer', 'kangaroo', 'raccoon', 'owl'],
-        correctAnswer: 1
-      },
-      {
-        title: 'mapache', // 25 raccoon
-        alternatives: ['deer', 'kangaroo', 'raccoon', 'owl'],
-        correctAnswer: 2
-      },
-      {
-        title: 'búho', // 26 owl
-        alternatives: ['deer', 'kangaroo', 'raccoon', 'owl'],
-        correctAnswer: 3
-      },
-      {
-        title: 'ardilla', // 27 squirrel
-        alternatives: ['squirrel', 'crocodile', 'snake', 'camel'],
-        correctAnswer: 0
-      },
-      {
-        title: 'cocodrilo', // 28 crocodile
-        alternatives: ['squirrel', 'crocodile', 'snake', 'camel'],
-        correctAnswer: 1
-      },
-      {
-        title: 'serpiente', // 29 snake
-        alternatives: ['squirrel', 'crocodile', 'snake', 'camel'],
-        correctAnswer: 2
-      },
-      {
-        title: 'camello', // 30 camel
-        alternatives: ['squirrel', 'crocodile', 'snake', 'camel'],
-        correctAnswer: 3
-      },
-      {
-        title: 'cabra', // 31 goat
-        alternatives: ['goat', 'donkey', 'goose', 'turkey'],
-        correctAnswer: 0
-      },
-      {
-        title: 'burro', // 32 donkey
-        alternatives: ['goat', 'donkey', 'goose', 'turkey'],
-        correctAnswer: 1
-      },
-      {
-        title: 'ganso', // 33 goose
-        alternatives: ['goat', 'donkey', 'goose', 'turkey'],
-        correctAnswer: 2
-      },
-      {
-        title: 'pavo', // 34 turkey
-        alternatives: ['goat', 'donkey', 'goose', 'turkey'],
-        correctAnswer: 3
-      },
-      {
-        title: 'loro', // 35 parrot
-        alternatives: ['parrot', 'dove', 'swan', 'ox'],
-        correctAnswer: 0
-      },
-      {
-        title: 'paloma', // 36 dove
-        alternatives: ['parrot', 'dove', 'swan', 'ox'],
-        correctAnswer: 1
-      },
-      {
-        title: 'cisne', // 37 swan
-        alternatives: ['parrot', 'dove', 'swan', 'ox'],
-        correctAnswer: 2
-      },
-      {
-        title: 'buey', // 38 ox
-        alternatives: ['parrot', 'dove', 'swan', 'ox'],
-        correctAnswer: 3
-      },
-      {
-        title: 'cebra', // 39 zebra
-        alternatives: ['zebra', 'whale', 'octopus', 'shrimp'],
-        correctAnswer: 0
-      },
-      {
-        title: 'ballena', // 40 whale
-        alternatives: ['zebra', 'whale', 'octopus', 'shrimp'],
-        correctAnswer: 1
-      },
-      {
-        title: 'pulpo', // 41 octopus
-        alternatives: ['zebra', 'whale', 'octopus', 'shrimp'],
-        correctAnswer: 2
-      },
-      {
-        title: 'camarón', // 42 shrimp
-        alternatives: ['zebra', 'whale', 'octopus', 'shrimp'],
-        correctAnswer: 3
-      },
-      {
-        title: 'foca', // 43 seal
-        alternatives: ['seal', 'walrus', 'squid', 'sloth'],
-        correctAnswer: 0
-      },
-      {
-        title: 'morsa', // 44 walrus
-        alternatives: ['seal', 'walrus', 'squid', 'sloth'],
-        correctAnswer: 1
-      },
-      {
-        title: 'calamar', // 45 squid
-        alternatives: ['seal', 'walrus', 'squid', 'sloth'],
-        correctAnswer: 2
-      },
-      {
-        title: 'perezoso', // 46 sloth
-        alternatives: ['seal', 'walrus', 'squid', 'sloth'],
-        correctAnswer: 3
-      },
-      {
-        title: 'alce', // 47 moose
-        alternatives: ['moose', 'beaver', 'badger', 'vulture'],
-        correctAnswer: 0
-      },
-      {
-        title: 'castor', // 48 beaver
-        alternatives: ['moose', 'beaver', 'badger', 'vulture'],
-        correctAnswer: 1
-      },
-      {
-        title: 'tejón', // 49 badger
-        alternatives: ['moose', 'beaver', 'badger', 'vulture'],
-        correctAnswer: 2
-      },
-      {
-        title: 'buitre', // 50 vulture
-        alternatives: ['moose', 'beaver', 'badger', 'vulture'],
-        correctAnswer: 3
-      },
-      {
-        title: 'abeja', // 51 bee
-        alternatives: ['bee', 'worm', 'snail', 'cricket'],
-        correctAnswer: 0
-      },
-      {
-        title: 'gusano', // 52 worm
-        alternatives: ['bee', 'worm', 'snail', 'cricket'],
-        correctAnswer: 1
-      },
-      {
-        title: 'caracol', // 53 snail
-        alternatives: ['bee', 'worm', 'snail', 'cricket'],
-        correctAnswer: 2
-      },
-      {
-        title: 'grillo', // 54 cricket
-        alternatives: ['bee', 'worm', 'snail', 'cricket'],
-        correctAnswer: 3
-      }
-  ];
+  // — original 54 —
+  { title: 'gato',       alternatives: ['dog', 'cat', 'bird', 'fish'],             correctAnswer: 1 },
+  { title: 'ave',        alternatives: ['mouse', 'hamster', 'lizard', 'bird'],     correctAnswer: 3 },
+  { title: 'rata',       alternatives: ['cat', 'fish', 'rat', 'shark'],            correctAnswer: 2 },
+  { title: 'mosca',      alternatives: ['fly', 'puma', 'fish', 'dog'],             correctAnswer: 0 },
+  { title: 'perro',      alternatives: ['cat', 'fish', 'dog', 'bird'],             correctAnswer: 2 },
+  { title: 'pez',        alternatives: ['lizard', 'hamster', 'fish', 'shark'],     correctAnswer: 2 },
+  { title: 'lagarto',    alternatives: ['mouse', 'lizard', 'puma', 'fly'],         correctAnswer: 1 },
+  { title: 'ratón',      alternatives: ['hamster', 'shark', 'dog', 'mouse'],       correctAnswer: 3 },
+  { title: 'tiburón',    alternatives: ['shark', 'lizard', 'bird', 'fly'],         correctAnswer: 0 },
+  { title: 'conejo',     alternatives: ['rabbit', 'horse', 'elephant', 'giraffe'], correctAnswer: 0 },
+  { title: 'caballo',    alternatives: ['lion', 'horse', 'turtle', 'bear'],        correctAnswer: 1 },
+  { title: 'jirafa',     alternatives: ['wolf', 'cow', 'giraffe', 'pig'],          correctAnswer: 2 },
+  { title: 'oso',        alternatives: ['rabbit', 'bear', 'horse', 'elephant'],    correctAnswer: 1 },
+  { title: 'lobo',       alternatives: ['giraffe', 'lion', 'wolf', 'turtle'],      correctAnswer: 2 },
+  { title: 'vaca',       alternatives: ['cow', 'pig', 'rabbit', 'horse'],          correctAnswer: 0 },
+  { title: 'cerdo',      alternatives: ['bear', 'elephant', 'cow', 'pig'],         correctAnswer: 3 },
+  { title: 'tortuga',    alternatives: ['turtle', 'wolf', 'lion', 'rabbit'],       correctAnswer: 0 },
+  { title: 'zorro',      alternatives: ['fox', 'duck', 'monkey', 'sheep'],         correctAnswer: 0 },
+  { title: 'pato',       alternatives: ['chicken', 'monkey', 'duck', 'fox'],       correctAnswer: 2 },
+  { title: 'mono',       alternatives: ['sheep', 'monkey', 'duck', 'chicken'],     correctAnswer: 1 },
+  { title: 'oveja',      alternatives: ['duck', 'sheep', 'chicken', 'monkey'],     correctAnswer: 1 },
+  { title: 'gallina',    alternatives: ['fox', 'sheep', 'monkey', 'chicken'],      correctAnswer: 3 },
+  { title: 'ciervo',     alternatives: ['deer', 'kangaroo', 'raccoon', 'owl'],     correctAnswer: 0 },
+  { title: 'canguro',    alternatives: ['deer', 'kangaroo', 'raccoon', 'owl'],     correctAnswer: 1 },
+  { title: 'mapache',    alternatives: ['deer', 'kangaroo', 'raccoon', 'owl'],     correctAnswer: 2 },
+  { title: 'búho',       alternatives: ['deer', 'kangaroo', 'raccoon', 'owl'],     correctAnswer: 3 },
+  { title: 'ardilla',    alternatives: ['squirrel', 'crocodile', 'snake', 'camel'], correctAnswer: 0 },
+  { title: 'cocodrilo',  alternatives: ['squirrel', 'crocodile', 'snake', 'camel'], correctAnswer: 1 },
+  { title: 'serpiente',  alternatives: ['squirrel', 'crocodile', 'snake', 'camel'], correctAnswer: 2 },
+  { title: 'camello',    alternatives: ['squirrel', 'crocodile', 'snake', 'camel'], correctAnswer: 3 },
+  { title: 'cabra',      alternatives: ['goat', 'donkey', 'goose', 'turkey'],      correctAnswer: 0 },
+  { title: 'burro',      alternatives: ['goat', 'donkey', 'goose', 'turkey'],      correctAnswer: 1 },
+  { title: 'ganso',      alternatives: ['goat', 'donkey', 'goose', 'turkey'],      correctAnswer: 2 },
+  { title: 'pavo',       alternatives: ['goat', 'donkey', 'goose', 'turkey'],      correctAnswer: 3 },
+  { title: 'loro',       alternatives: ['parrot', 'dove', 'swan', 'ox'],           correctAnswer: 0 },
+  { title: 'paloma',     alternatives: ['parrot', 'dove', 'swan', 'ox'],           correctAnswer: 1 },
+  { title: 'cisne',      alternatives: ['parrot', 'dove', 'swan', 'ox'],           correctAnswer: 2 },
+  { title: 'buey',       alternatives: ['parrot', 'dove', 'swan', 'ox'],           correctAnswer: 3 },
+  { title: 'cebra',      alternatives: ['zebra', 'whale', 'octopus', 'shrimp'],    correctAnswer: 0 },
+  { title: 'ballena',    alternatives: ['zebra', 'whale', 'octopus', 'shrimp'],    correctAnswer: 1 },
+  { title: 'pulpo',      alternatives: ['zebra', 'whale', 'octopus', 'shrimp'],    correctAnswer: 2 },
+  { title: 'camarón',    alternatives: ['zebra', 'whale', 'octopus', 'shrimp'],    correctAnswer: 3 },
+  { title: 'foca',       alternatives: ['seal', 'walrus', 'squid', 'sloth'],       correctAnswer: 0 },
+  { title: 'morsa',      alternatives: ['seal', 'walrus', 'squid', 'sloth'],       correctAnswer: 1 },
+  { title: 'calamar',    alternatives: ['seal', 'walrus', 'squid', 'sloth'],       correctAnswer: 2 },
+  { title: 'perezoso',   alternatives: ['seal', 'walrus', 'squid', 'sloth'],       correctAnswer: 3 },
+  { title: 'alce',       alternatives: ['moose', 'beaver', 'badger', 'vulture'],   correctAnswer: 0 },
+  { title: 'castor',     alternatives: ['moose', 'beaver', 'badger', 'vulture'],   correctAnswer: 1 },
+  { title: 'tejón',      alternatives: ['moose', 'beaver', 'badger', 'vulture'],   correctAnswer: 2 },
+  { title: 'buitre',     alternatives: ['moose', 'beaver', 'badger', 'vulture'],   correctAnswer: 3 },
+  { title: 'abeja',      alternatives: ['bee', 'worm', 'snail', 'cricket'],        correctAnswer: 0 },
+  { title: 'gusano',     alternatives: ['bee', 'worm', 'snail', 'cricket'],        correctAnswer: 1 },
+  { title: 'caracol',    alternatives: ['bee', 'worm', 'snail', 'cricket'],        correctAnswer: 2 },
+  { title: 'grillo',     alternatives: ['bee', 'worm', 'snail', 'cricket'],        correctAnswer: 3 },
+
+  // — insects —
+  { title: 'mariposa',   alternatives: ['butterfly', 'dragonfly', 'moth', 'bee'],      correctAnswer: 0 },
+  { title: 'hormiga',    alternatives: ['wasp', 'ant', 'beetle', 'fly'],               correctAnswer: 1 },
+  { title: 'araña',      alternatives: ['scorpion', 'centipede', 'spider', 'ant'],     correctAnswer: 2 },
+  { title: 'escarabajo', alternatives: ['moth', 'beetle', 'cricket', 'dragonfly'],     correctAnswer: 1 },
+  { title: 'libélula',   alternatives: ['firefly', 'moth', 'wasp', 'dragonfly'],       correctAnswer: 3 },
+
+  // — sea creatures —
+  { title: 'delfín',     alternatives: ['dolphin', 'porpoise', 'seal', 'orca'],        correctAnswer: 0 },
+  { title: 'cangrejo',   alternatives: ['lobster', 'shrimp', 'crab', 'clam'],          correctAnswer: 2 },
+  { title: 'langosta',   alternatives: ['lobster', 'crab', 'shrimp', 'squid'],         correctAnswer: 0 },
+  { title: 'medusa',     alternatives: ['anemone', 'jellyfish', 'coral', 'urchin'],    correctAnswer: 1 },
+  { title: 'anguila',    alternatives: ['eel', 'snake', 'worm', 'leech'],              correctAnswer: 0 },
+  { title: 'salmón',     alternatives: ['trout', 'cod', 'salmon', 'tuna'],             correctAnswer: 2 },
+  { title: 'atún',       alternatives: ['tuna', 'salmon', 'sardine', 'mackerel'],      correctAnswer: 0 },
+
+  // — large mammals —
+  { title: 'elefante',   alternatives: ['hippo', 'elephant', 'rhino', 'giraffe'],      correctAnswer: 1 },
+  { title: 'rinoceronte',alternatives: ['elephant', 'hippo', 'rhino', 'buffalo'],      correctAnswer: 2 },
+  { title: 'hipopótamo', alternatives: ['elephant', 'hippo', 'rhino', 'walrus'],       correctAnswer: 1 },
+  { title: 'gorila',     alternatives: ['baboon', 'gorilla', 'chimpanzee', 'orangutan'], correctAnswer: 1 },
+  { title: 'chimpancé',  alternatives: ['gorilla', 'monkey', 'chimpanzee', 'baboon'],  correctAnswer: 2 },
+  { title: 'orangután',  alternatives: ['gorilla', 'chimpanzee', 'baboon', 'orangutan'], correctAnswer: 3 },
+
+  // — big cats & predators —
+  { title: 'leopardo',   alternatives: ['cheetah', 'jaguar', 'leopard', 'lion'],       correctAnswer: 2 },
+  { title: 'guepardo',   alternatives: ['cheetah', 'leopard', 'jaguar', 'puma'],       correctAnswer: 0 },
+  { title: 'jaguar',     alternatives: ['lion', 'puma', 'jaguar', 'ocelot'],           correctAnswer: 2 },
+  { title: 'lince',      alternatives: ['bobcat', 'lynx', 'ocelot', 'cheetah'],        correctAnswer: 1 },
+  { title: 'puma',       alternatives: ['jaguar', 'puma', 'lion', 'cheetah'],          correctAnswer: 1 },
+  { title: 'hiena',      alternatives: ['hyena', 'jackal', 'dingo', 'wolf'],           correctAnswer: 0 },
+  { title: 'coyote',     alternatives: ['dingo', 'fox', 'wolf', 'coyote'],             correctAnswer: 3 },
+
+  // — other mammals —
+  { title: 'nutria',     alternatives: ['beaver', 'otter', 'mink', 'weasel'],          correctAnswer: 1 },
+  { title: 'murciélago', alternatives: ['bat', 'moth', 'owl', 'raven'],                correctAnswer: 0 },
+  { title: 'erizo',      alternatives: ['porcupine', 'hedgehog', 'armadillo', 'shrew'], correctAnswer: 1 },
+  { title: 'llama',      alternatives: ['camel', 'alpaca', 'llama', 'vicuña'],         correctAnswer: 2 },
+  { title: 'bisonte',    alternatives: ['buffalo', 'bison', 'bull', 'ox'],             correctAnswer: 1 },
+  { title: 'antílope',   alternatives: ['gazelle', 'deer', 'antelope', 'elk'],         correctAnswer: 2 },
+  { title: 'gacela',     alternatives: ['antelope', 'gazelle', 'deer', 'elk'],         correctAnswer: 1 },
+  { title: 'mofeta',     alternatives: ['weasel', 'ferret', 'skunk', 'badger'],        correctAnswer: 2 },
+
+  // — birds —
+  { title: 'águila',     alternatives: ['hawk', 'eagle', 'falcon', 'osprey'],          correctAnswer: 1 },
+  { title: 'halcón',     alternatives: ['eagle', 'hawk', 'falcon', 'vulture'],         correctAnswer: 2 },
+  { title: 'flamenco',   alternatives: ['heron', 'flamingo', 'stork', 'crane'],        correctAnswer: 1 },
+  { title: 'pingüino',   alternatives: ['puffin', 'penguin', 'albatross', 'petrel'],   correctAnswer: 1 },
+  { title: 'avestruz',   alternatives: ['emu', 'rhea', 'kiwi', 'ostrich'],             correctAnswer: 3 },
+  { title: 'gaviota',    alternatives: ['seagull', 'tern', 'pelican', 'gannet'],       correctAnswer: 0 },
+  { title: 'tucán',      alternatives: ['parrot', 'macaw', 'toucan', 'hornbill'],      correctAnswer: 2 },
+  { title: 'colibrí',    alternatives: ['sparrow', 'hummingbird', 'swallow', 'finch'], correctAnswer: 1 },
+  { title: 'cuervo',     alternatives: ['raven', 'crow', 'magpie', 'jackdaw'],         correctAnswer: 0 },
+  { title: 'pelícano',   alternatives: ['pelican', 'stork', 'heron', 'crane'],         correctAnswer: 0 },
+  { title: 'cigüeña',    alternatives: ['heron', 'crane', 'stork', 'egret'],           correctAnswer: 2 },
+
+  // — reptiles & amphibians —
+  { title: 'iguana',     alternatives: ['lizard', 'iguana', 'gecko', 'chameleon'],     correctAnswer: 1 },
+  { title: 'camaleón',   alternatives: ['iguana', 'gecko', 'chameleon', 'lizard'],     correctAnswer: 2 },
+  { title: 'rana',       alternatives: ['toad', 'frog', 'salamander', 'newt'],         correctAnswer: 1 },
+  { title: 'sapo',       alternatives: ['frog', 'toad', 'newt', 'salamander'],         correctAnswer: 1 },
+  { title: 'cobra',      alternatives: ['viper', 'python', 'cobra', 'boa'],            correctAnswer: 2 },
+  { title: 'pitón',      alternatives: ['boa', 'python', 'anaconda', 'cobra'],         correctAnswer: 1 },
+  { title: 'anaconda',   alternatives: ['boa', 'python', 'viper', 'anaconda'],         correctAnswer: 3 },
+];
